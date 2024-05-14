@@ -8,4 +8,6 @@ func Route(route *gin.Engine) {
 
 	route.GET("/users", getUsers)
 
+	route.PUT("/users/:name", updateUser)
+
 }

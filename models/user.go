@@ -16,7 +16,20 @@ func (user *User) Delete() {
 
 }
 
-func (user *User) Update() {
+func (user *User) Update(parameterUrl string) error {
+	query := `UPDATE users SET name = ?, age = ?, deskription = ? WHERE name = ?`
+
+	stmt, err := db.DB.Prepare(query)
+
+	if err != nil {
+		return err
+	}
+
+	defer stmt.Close()
+
+	_, err = stmt.Exec(&user.Name, &user.Age, &user.Deskription, &parameterUrl)
+
+	return err
 
 }
 
