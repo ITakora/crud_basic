@@ -6,4 +6,6 @@ func Route(route *gin.Engine) {
 
 	route.POST("/users", createUser)
 
+	route.GET("/users", getUsers)
+
 }

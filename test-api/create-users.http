@@ -2,7 +2,7 @@ POST http://localhost:8080/users
 content-type: application/json
 
 {
-  "name": "jony",
-  "age": 18,
-  "deskription": "jony is student"
+  "name": "Aris",
+  "age": 17,
+  "deskription": "Aris is Fresh Graduate"
 }
